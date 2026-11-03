@@ -1,10 +1,14 @@
-/ Scam Detective - My First Cybersecurity Game
+/ Scam Detective Game
+// Created by Gary
 
+// Start the game
 function startGame() {
     document.getElementById("welcome").style.display = "none";
     document.getElementById("game").style.display = "block";
+    document.getElementById("result").style.display = "none";
 }
 
+// Check player's answer
 function checkAnswer(answer) {
     document.getElementById("game").style.display = "none";
     document.getElementById("result").style.display = "block";
@@ -18,7 +22,9 @@ function checkAnswer(answer) {
     }
 }
 
+// Restart the game
 function restartGame() {
     document.getElementById("result").style.display = "none";
+    document.getElementById("game").style.display = "none";
     document.getElementById("welcome").style.display = "block";
 }
