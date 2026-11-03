@@ -1,20 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Scam Detective</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Scam Detective</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Scam Detective</h1>
-    <h2>Can You Spot a Scam?</h2>
 
-    <p>
-        Learn how to recognize scams
-        and protect your family!
-    </p >
+    <!-- SCREEN 1: WELCOME -->
 
-    <button>START GAME</button>
+    <div id="welcome">
+
+        <h1>🔍 Scam Detective</h1>
+
+        <h2>Can You Spot a Scam?</h2>
+
+        <p>
+            Learn how to recognize scams
+            and protect yourself and your family!
+        </p >
+
+        <button onclick="startGame()">
+            ▶ START GAME
+        </button>
+
+    </div>
+
+
+    <!-- SCREEN 2: GAME -->
+
+    <div id="game" style="display:none;">
+
+        <h1>🕵️ Scam Detective</h1>
+
+        <h2>Question 1 of 1</h2>
+
+        <h2>📱 You Received a Text Message!</h2>
+
+        <p>
+            Dear Customer,<br><br>
+
+            Your bank account has been frozen!<br>
+
+            Please click the link below immediately
+            to verify your account.<br><br>
+
+            www.bank-verify.example
+        </p >
+
+        <h2>Is this a scam or a safe message?</h2>
+
+        <button onclick="checkAnswer('scam')">
+            🚨 SCAM
+        </button>
+
+        <button onclick="checkAnswer('safe')">
+            ✅ SAFE
+        </button>
+
+    </div>
+
+
+    <!-- SCREEN 3: RESULT -->
+
+    <div id="result" style="display:none;">
+
+        <h1 id="resultTitle"></h1>
+
+        <h2>Why is this a scam?</h2>
+
+        <p>
+            🚨 It creates a sense of urgency.
+        </p >
+
+        <p>
+            🔗 It asks you to click an unfamiliar link.
+        </p >
+
+        <p>
+            ⚠️ The message may be impersonating your bank.
+        </p >
+
+        <h2>🛡️ Safety Tip</h2>
+
+        <p>
+            Never click suspicious links.
+            Contact your bank using its official
+            phone number or mobile app.
+        </p >
+
+        <button onclick="restartGame()">
+            🔄 PLAY AGAIN
+        </button>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
 </body>
 </html>
